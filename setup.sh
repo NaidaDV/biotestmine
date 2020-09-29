@@ -128,7 +128,7 @@ fi
 cd $DIR
 if test ! -f project.xml; then
     echo '#---> Copying over malariamine project.xml'
-    wget https://raw.githubusercontent.com/intermine/biotestmine/master/data/project.xml
+    cp ./data/project.xml .
 fi
 
 echo '#---> Personalising project.xml'
