@@ -158,6 +158,6 @@ echo '#--- Finished loading data.'
 echo '#---> Building userprofile..'
 ./gradlew buildUserDB
 echo '#---> Releasing web-application'
-./gradlew cargoRunLocal
+./gradlew cargoRunLocal &
 
 echo BUILD COMPLETE
