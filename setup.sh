@@ -4,7 +4,7 @@ if ! [ -d /home/$USER/.intermine ]; then
 mkdir /home/$USER/.intermine 
 fi
 
-cp ./data/biotestmine.properties /home/$USER/.intermine/biotestmine.properties
+cp $DIR/data/biotestmine.properties /home/$USER/.intermine/biotestmine.properties
 # Build and release a biological test mine.
 
 set -e
