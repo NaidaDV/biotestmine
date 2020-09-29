@@ -1,0 +1,32 @@
+bin/
+dist/
+client-dist/
+build/
+client-build/
+webapp/tools/
+*.log
+*.log.*
+.settings
+.eclipse
+executeLog*
+*.pyc
+*.class
+productionLog
+*~
+
+# this is a tutorial demo
+# we need the user to get these from the repo everytime
+project.xml
+project_build
+
+# IDEs
+nbproject/
+nb-build.xml
+.idea/
+apache-tomcat*
+prefixed
+failures.list
+*.jks
+*.iml
+out/
+.gradle/
