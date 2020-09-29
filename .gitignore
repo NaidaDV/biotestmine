@@ -16,7 +16,7 @@ productionLog
 
 # this is a tutorial demo
 # we need the user to get these from the repo everytime
-project.xml
+#project.xml
 project_build
 
 # IDEs
