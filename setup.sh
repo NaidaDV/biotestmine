@@ -1,5 +1,5 @@
 #!/bin/bash
-
+DIR="$(cd $(dirname "$0"); pwd)"
 if ! [ -d /home/$USER/.intermine ]; then
 mkdir /home/$USER/.intermine 
 fi
@@ -10,7 +10,6 @@ cp ./data/biotestmine.properties /home/$USER/.intermine/biotestmine.properties
 set -e
 set -o pipefail # Pipes are considered failed if any of their commands fail.
 
-DIR="$(cd $(dirname "$0"); pwd)"
 MINENAME=biotestmine
 PROD_DB=$MINENAME
 ITEMS_DB=items-$MINENAME
