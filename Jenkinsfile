@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage("Build") {
 			steps {
-				sshagent(credentials: ['jenkins-ci']) {
+				sshagent(credentials: ['dev-ssh']) {
 					sh '''
 						if ! [ -d /home/$USER/git ]; then
                 				mkdir /home/$USER/git
