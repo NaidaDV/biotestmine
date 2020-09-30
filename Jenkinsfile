@@ -10,7 +10,7 @@ pipeline {
 						ssh -o StrictHostKeyChecking=no -l ubuntu 3.83.87.128 "if ! [ -d /home/ubuntu/biotestmine ]; then mkdir /home/ubuntu/biotestmine; else rm -R /home/ubuntu/biotestmine; mkdir /home/ubuntu/biotestmine; fi"
 						ssh -o StrictHostKeyChecking=no -l ubuntu 3.83.87.128 "git clone https://github.com/NaidaDV/biotestmine.git /home/ubuntu/biotestmine"
 						ssh -o StrictHostKeyChecking=no -l ubuntu 3.83.87.128 ./biotestmine/setup.sh
-						ssh -o StrictHostKeyChecking=no -l ubuntu 3.83.87.128 "sleep 420"
+						ssh -o StrictHostKeyChecking=no -l ubuntu 3.83.87.128 "sleep 240"
 						ssh -o StrictHostKeyChecking=no -l ubuntu 3.83.87.128 "killall java"
 						ssh -f -o StrictHostKeyChecking=no -l ubuntu 3.83.87.128 "/home/ubuntu/biotestmine/gradlew cargoRunLocal > /dev/null 2>&1 &"
 
