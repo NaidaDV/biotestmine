@@ -12,7 +12,7 @@ pipeline {
 						ssh -o StrictHostKeyChecking=no -l ubuntu 3.92.239.186 ./biotestmine/setup.sh
 						ssh -o StrictHostKeyChecking=no -l ubuntu 3.92.239.186 "sleep 240"
 						ssh -o StrictHostKeyChecking=no -l ubuntu 3.92.239.186 "killall java"
-						ssh -o StrictHostKeyChecking=no -l ubuntu 3.92.239.186 "/home/ubuntu/biotestmine/gradlew cargoRunLocal > /dev/null 1>&2 &"
+						ssh -o StrictHostKeyChecking=no -l ubuntu 3.92.239.186 "cd ./biotestmine; nohup ./gradlew cargoRunLocal > /dev/null 1>&2 &"
 						ssh -o StrictHostKeyChecking=no -l ubuntu 3.92.239.186 "sleep 240"
 
 					'''
