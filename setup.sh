@@ -158,6 +158,6 @@ echo '#--- Finished loading data.'
 echo '#---> Building userprofile..'
 ./gradlew buildUserDB
 echo '#---> Releasing web-application'
-bash -c "exec -a biotestmineApp ./gradlew cargoRunLocal > /dev/null 2>&1 &"
+./gradlew cargoRunLocal > /dev/null 2>&1 &
 
 echo BUILD COMPLETE
