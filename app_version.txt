@@ -1,1 +1,1 @@
-MyBiotestmine v12.0
+MyBiotestmine v1.0
