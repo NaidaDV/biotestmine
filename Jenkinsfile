@@ -19,5 +19,14 @@ pipeline {
 				}
 			}
 		}
+		
+		stage("Test") {
+			steps {
+				sh '''
+				wget -S $DEV_IP_JEN
+				curl $DEV_IP_JEN
+				'''
+			}
+		}
 	}
 }
