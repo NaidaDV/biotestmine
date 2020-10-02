@@ -23,8 +23,8 @@ pipeline {
 		stage("Test") {
 			steps {
 				sh '''
-				wget -S $DEV_IP_JEN
-				curl $DEV_IP_JEN
+				wget -S $DEV_IP_JEN:8080
+				curl $DEV_IP_JEN:8080
 				'''
 			}
 		}
