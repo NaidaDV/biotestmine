@@ -32,7 +32,7 @@ pipeline {
 			steps {
 				sshagent(credentials: ['dev-ssh']) { 
 					sh '''
-						ssh -o StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN cd ./biotestmine; . ./app_version.sh
+						ssh -o StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN cd ./biotestmine; source ./app_version.sh
 					
 				        '''
 				}
