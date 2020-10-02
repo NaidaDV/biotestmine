@@ -35,6 +35,7 @@ pipeline {
 					ssh -o StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN "export INTERMINE_V=$(cat ./biotestmine/app_version.txt)"	
 					
 				        '''
+				}
 			}
 		}
 		
