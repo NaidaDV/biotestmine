@@ -36,7 +36,7 @@ pipeline {
 			steps {
 				sshagent(credentials: ['dev-ssh']) { 
 					sh '''
-						ssh -o StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN cd ./biotestmine; export MINE_VERSION="$(echo $(echo app_version.txt):$(date +'%D'))";
+						ssh -o StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN cd ./biotestmine; export MINE_VERSION="$(echo $(cat app_version.txt):$(date +'%D'))";
 					
 				        '''
 				}
