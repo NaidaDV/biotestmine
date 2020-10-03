@@ -2,7 +2,7 @@ pipeline {
 	agent any
 	
 	environment {
-        	MINE_VERSION = $(echo $(cat app_version.txt):$(date +"%D"))
+        	MINE_VERSION = $("echo $(cat app_version.txt):$(date +'%D')")
         }
 	stages {
 		stage("Build") {
