@@ -36,7 +36,7 @@ pipeline {
 			steps {
 				sshagent(credentials: ['dev-ssh']) { 
 					sh '''
-						ssh -o SendEnv=JENKINS_HOME StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN "cd ./biotestmine"
+						ssh -o StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN cd ./biotestmine; export MINE_VERSION="$(echo $(echo app_version):$(date +'%D'))";
 					
 				        '''
 				}
