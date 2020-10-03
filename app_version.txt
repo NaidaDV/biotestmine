@@ -1,1 +1,1 @@
-BioTestMine v1.0
+Mine_Version=BioTestMine-v1.0
