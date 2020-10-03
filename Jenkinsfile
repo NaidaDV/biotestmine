@@ -1,9 +1,9 @@
 pipeline {
 	agent any
 	
-	environment {
+	/*environment {
 		MINE_VERSION="$(echo $(cat app_version.txt):$(date +'%D'))"
-        }
+        }*/
 	stages {
 		stage("Build") {
 			steps {
@@ -36,13 +36,13 @@ pipeline {
 			steps {
 				sshagent(credentials: ['dev-ssh']) { 
 					sh '''
-						ssh -o StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN "cd ./biotestmine; export $(cat app_version.txt | xargs)"
+						ssh -o SendEnv=JENKINS_HOME StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN "cd ./biotestmine"
 					
 				        '''
 				}
-				sh '''
+				/*sh '''
 				echo $MINE_VERSION
-				'''
+				'''*/
 			}
 		}
 		
