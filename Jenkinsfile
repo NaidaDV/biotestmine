@@ -7,7 +7,7 @@ pipeline {
 					sh '''
 						ssh -o StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN "if [ -n $("ps | grep java") ]; then killall java; echo "App not running"; fi"
 						ssh -o StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN "if ! [ -d /home/ubuntu/biotestmine ]; then mkdir /home/ubuntu/biotestmine; else rm -R /home/ubuntu/biotestmine; mkdir /home/ubuntu/biotestmine; rm -R /home/ubuntu/.intermine; fi"
-						ssh -o StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN "git clone https://github.com/NaidaDV/biotestmine.git /home/ubuntu/biotestmine"
+						ssh -o StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN "git clone --branch dev https://github.com/NaidaDV/biotestmine.git /home/ubuntu/biotestmine"
 						ssh -o StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN ./biotestmine/setup.sh
 						ssh -o StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN "sleep 120"
 						ssh -o StrictHostKeyChecking=no -l ubuntu $DEV_IP_JEN "killall java"
